@@ -1,0 +1,6 @@
+/home/piotr/programming/c#/SpeakyClient/speakyclient/src/SpeakyClient/SpeakyClient/bin/Debug/SpeakyClient.exe
+/home/piotr/programming/c#/SpeakyClient/speakyclient/src/SpeakyClient/SpeakyClient/bin/Debug/SpeakyClient.pdb
+/home/piotr/programming/c#/SpeakyClient/speakyclient/src/SpeakyClient/SpeakyClient/obj/x86/Debug/SpeakyClient.csprojResolveAssemblyReference.cache
+/home/piotr/programming/c#/SpeakyClient/speakyclient/src/SpeakyClient/SpeakyClient/obj/x86/Debug/SpeakyClient.csproj.CoreCompileInputs.cache
+/home/piotr/programming/c#/SpeakyClient/speakyclient/src/SpeakyClient/SpeakyClient/obj/x86/Debug/SpeakyClient.exe
+/home/piotr/programming/c#/SpeakyClient/speakyclient/src/SpeakyClient/SpeakyClient/obj/x86/Debug/SpeakyClient.pdb

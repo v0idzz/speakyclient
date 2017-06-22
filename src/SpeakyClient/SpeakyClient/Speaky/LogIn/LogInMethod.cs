@@ -1,10 +1,10 @@
 ﻿using System;
 namespace SpeakyClient.Speaky.LogIn
 {
-    public class LogInMethod
+    public enum LogInMethod
     {
-        public LogInMethod()
-        {
-        }
+        Facebook,
+        Google,
+        Normal
     }
 }

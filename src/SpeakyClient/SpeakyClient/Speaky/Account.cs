@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SpeakyClient.Speaky
+namespace SpeakyClient
 {
     public class Account
     {
