@@ -9,7 +9,7 @@ namespace SpeakyClient.Utils.Http
         public static async Task<string> GetAsync(string url)
 		{
 			var client = CreateClient();
-			client.DefaultRequestHeaders.Add("User-agent", "mal_client_0.1");
+			client.DefaultRequestHeaders.Add("User-agent", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0");
 
 			var response = await client.GetAsync(url);
 
@@ -24,7 +24,7 @@ namespace SpeakyClient.Utils.Http
         public static async Task<string> PostAsync(string url, HttpContent content)
 		{
 			var client = CreateClient();
-			client.DefaultRequestHeaders.Add("User-agent", "mal_client_0.1");
+			client.DefaultRequestHeaders.Add("User-agent", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0");
 
 			var response = await client.PostAsync(url, content);
 
