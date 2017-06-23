@@ -1,10 +1,7 @@
 ﻿using System;
 namespace SpeakyClient.Utils.Html
 {
-    public class HtmlUtil
+    public static class HtmlUtil
     {
-        public HtmlUtil()
-        {
-        }
     }
 }

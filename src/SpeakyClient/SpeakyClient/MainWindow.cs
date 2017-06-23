@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Gtk;
 using SpeakyClient;
 using SpeakyClient.Speaky.LogIn;
