@@ -43,7 +43,7 @@ namespace SpeakyClient.Utils.Http
 
         public static async Task<string> PostAsync(string url, HttpContent content, string referer = null)
 		{
-            var client = CreateClient(10000);
+            var client = CreateClient(30000);
 
 			client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0");
             client.DefaultRequestHeaders.TryAddWithoutValidation("Accept-Language", "en-US,en;q=0.5");
@@ -107,5 +107,25 @@ namespace SpeakyClient.Utils.Http
         {
             return System.Web.HttpUtility.HtmlDecode(s);
         }
+
+		public static async Task<Gdk.Pixbuf> DownloadBitmap(string url)
+		{
+			var client = CreateClient(20000);
+
+			client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0");
+			client.DefaultRequestHeaders.TryAddWithoutValidation("Accept-Language", "en-US,en;q=0.5");
+			client.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+			client.DefaultRequestHeaders.TryAddWithoutValidation("Connection", "keep-alive");
+			client.DefaultRequestHeaders.TryAddWithoutValidation("Upgrade-Insecure-Requests", "1");
+
+			var response = await client.GetAsync(url);
+
+			if (!VaildateResponse(response))
+				throw new Exception("Status code isn't success, is http request wrong?");
+
+			var responseBytes = await response.Content.ReadAsByteArrayAsync();
+
+			return new Gdk.Pixbuf(responseBytes);
+		}
     }
 }

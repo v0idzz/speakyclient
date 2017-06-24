@@ -3,6 +3,7 @@ using SpeakyClient.Utils.Html;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Diagnostics;
+using HtmlAgilityPack;
 
 namespace SpeakyClient.Speaky.LogIn
 {
@@ -36,7 +37,9 @@ namespace SpeakyClient.Speaky.LogIn
             var content = HttpUtil.CreateHttpContent(form);
 
             var speakyPage = await HttpUtil.PostAsync("https://www.facebook.com" + form.Action.HttpDecode(), content, HttpUtil.LocationUrl);
-            return new Account();
+            if (!HttpUtil.LocationUrl.Contains("speaky.com/home"))
+                return null;
+            return new Account(LogInMethod.Facebook);
         }
     }
 }

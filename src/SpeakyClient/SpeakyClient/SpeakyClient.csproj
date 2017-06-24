@@ -30,27 +30,36 @@
     <Reference Include="System" />
     <Reference Include="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="gdk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>glib-sharp-2.0</Package>
     </Reference>
     <Reference Include="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>glade-sharp-2.0</Package>
     </Reference>
     <Reference Include="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="atk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
     <Reference Include="System.Web" />
     <Reference Include="System.Net.Http" />
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +84,10 @@
     <Compile Include="Utils\Http\HttpUtil.cs" />
     <Compile Include="Utils\Html\HtmlForm.cs" />
     <Compile Include="Utils\Html\InputElement.cs" />
+    <Compile Include="HomeWindow.cs" />
+    <Compile Include="gtk-gui\SpeakyClient.HomeWindow.cs" />
+    <Compile Include="Speaky\Api\Json\Objects\MyAccount.cs" />
+    <Compile Include="Speaky\Api\Json\Endpoints\JsonApiEndpoints.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Speaky\" />
@@ -82,6 +95,10 @@
     <Folder Include="Utils\" />
     <Folder Include="Utils\Http\" />
     <Folder Include="Utils\Html\" />
+    <Folder Include="Speaky\Api\" />
+    <Folder Include="Speaky\Api\Json\" />
+    <Folder Include="Speaky\Api\Json\Endpoints\" />
+    <Folder Include="Speaky\Api\Json\Objects\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

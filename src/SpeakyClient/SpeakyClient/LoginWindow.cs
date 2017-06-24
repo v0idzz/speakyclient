@@ -16,7 +16,7 @@ namespace SpeakyClient
             this.Title += _logInMethod.ToString();
         }
 
-        protected void OnLogInBtnClicked(object sender, EventArgs e)
+        protected async void OnLogInBtnClicked(object sender, EventArgs e)
         {
             IAccountProvider accountProvider = null;
             switch (_logInMethod)
@@ -34,7 +34,16 @@ namespace SpeakyClient
 
             if (accountProvider != null)
             {
-                var account = accountProvider.Login();
+                var account = await accountProvider.Login();
+                if (account != null)
+                {
+                    Gtk.Application.Invoke(delegate
+                    {
+                        var homeWin = new HomeWindow(account);
+                        homeWin.Show();
+                        this.Destroy();
+                    });
+                }
             }
         }
     }
