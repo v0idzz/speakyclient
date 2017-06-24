@@ -1,24 +1,7 @@
-﻿﻿using System;
+﻿﻿﻿using System;
 using System.Collections.Generic;
-namespace SpeakyClient.Speaky.Api.Json.Objects
+namespace SpeakyClient.Speaky.Api.Json.Classes.RootObjects
 {
-	public class Data
-	{
-		public int messagesNumber { get; set; }
-		public int sentCorrectedMessagesNumber { get; set; }
-		public int sentAcceptedConversationNumber { get; set; }
-	}
-
-    public class Stickers
-	{
-	}
-
-    public class LearningLanguageLevel
-	{
-		public int id { get; set; }
-		public int level { get; set; }
-	}
-
 	public class MyAccount
 	{
 		public string accessLevel { get; set; }
@@ -33,7 +16,7 @@ namespace SpeakyClient.Speaky.Api.Json.Objects
 		public List<object> userGroups { get; set; }
 		public int signUpOn { get; set; }
 		public List<object> blockedLanguageIds { get; set; }
-		public Data data { get; set; }
+		public MessagesData data { get; set; }
 		public int coins { get; set; }
 		public int hearts { get; set; }
 		public string email { get; set; }

@@ -86,8 +86,17 @@
     <Compile Include="Utils\Html\InputElement.cs" />
     <Compile Include="HomeWindow.cs" />
     <Compile Include="gtk-gui\SpeakyClient.HomeWindow.cs" />
-    <Compile Include="Speaky\Api\Json\Objects\MyAccount.cs" />
     <Compile Include="Speaky\Api\Json\Endpoints\JsonApiEndpoints.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\Stickers.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\LearningLanguageLevel.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\MessagesData.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\User.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\ConversationUser.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\RootObjects\MyAccount.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\ExtraData.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\LastMessage.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\RootObjects\AcceptedConversations.cs" />
+    <Compile Include="Utils\UI\ContactTreeNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Speaky\" />
@@ -98,7 +107,9 @@
     <Folder Include="Speaky\Api\" />
     <Folder Include="Speaky\Api\Json\" />
     <Folder Include="Speaky\Api\Json\Endpoints\" />
-    <Folder Include="Speaky\Api\Json\Objects\" />
+    <Folder Include="Speaky\Api\Json\Classes\" />
+    <Folder Include="Speaky\Api\Json\Classes\RootObjects\" />
+    <Folder Include="Utils\UI\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

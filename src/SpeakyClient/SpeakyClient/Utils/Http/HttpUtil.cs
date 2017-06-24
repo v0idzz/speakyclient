@@ -18,7 +18,7 @@ namespace SpeakyClient.Utils.Http
 
         public static async Task<string> GetAsync(string url, string referer = null)
 		{
-            var client = CreateClient();
+            var client = CreateClient(5000);
 
 			client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0");
 			client.DefaultRequestHeaders.TryAddWithoutValidation("Accept-Language", "en-US,en;q=0.5");
