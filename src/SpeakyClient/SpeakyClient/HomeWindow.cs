@@ -41,7 +41,7 @@ namespace SpeakyClient
 
             chatsView.NodeSelection.Changed += OnSelectionChanged;
 
-			this.hbox2.Add(chatsView);
+			hbox2.Add(chatsView);
             var box = (Gtk.Box.BoxChild)hbox2[chatsView];
 			box.Position = 1;
 
@@ -54,6 +54,10 @@ namespace SpeakyClient
             var node = (ContactTreeNode)selection.SelectedNode;
             chatImg.Pixbuf?.Dispose();
             chatImg.Pixbuf = (await node.User.GetProfilePicture()).ScaleSimple(50, 50, Gdk.InterpType.Bilinear);
+
+            chatNameLbl.Text = node.User.firstname + " " + node.User.lastname;
+            additionalInfoLbl.Text = (node.User.isConnected ? "now" : _account.GetConversationUserByUser(node.User).lastSeen) + ", ";
+            additionalInfoLbl.Text += node.User.address;
         }
 
         protected void OnGooglePlayBtnClicked(object sender, EventArgs e)

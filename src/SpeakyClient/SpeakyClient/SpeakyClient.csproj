@@ -95,7 +95,7 @@
     <Compile Include="Speaky\Api\Json\Classes\RootObjects\MyAccount.cs" />
     <Compile Include="Speaky\Api\Json\Classes\ExtraData.cs" />
     <Compile Include="Speaky\Api\Json\Classes\LastMessage.cs" />
-    <Compile Include="Speaky\Api\Json\Classes\RootObjects\AcceptedConversations.cs" />
+    <Compile Include="Speaky\Api\Json\Classes\RootObjects\AcceptedConversation.cs" />
     <Compile Include="Utils\UI\ContactTreeNode.cs" />
   </ItemGroup>
   <ItemGroup>

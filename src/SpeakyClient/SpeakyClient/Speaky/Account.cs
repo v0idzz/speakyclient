@@ -22,7 +22,7 @@ namespace SpeakyClient
 
         private Gdk.Pixbuf _picture;
         private MyAccount _account;
-        private List<AcceptedConversations> _acceptedConversations;
+        private List<AcceptedConversation> _acceptedConversations;
 
         public Account(LogInMethod method)
         {
@@ -37,12 +37,17 @@ namespace SpeakyClient
             _account = JsonConvert.DeserializeObject<MyAccount>(await HttpUtil.GetAsync(JsonApiEndpoints.GetFullUrl(JsonApiEndpoints.MY_ACCOUNT)));
 
             var friendsJson = await HttpUtil.GetAsync(JsonApiEndpoints.GetFullUrl(JsonApiEndpoints.ACCEPTED_CONVERSATIONS));
-            _acceptedConversations = JsonConvert.DeserializeObject<List<AcceptedConversations>>(friendsJson);
+            _acceptedConversations = JsonConvert.DeserializeObject<List<AcceptedConversation>>(friendsJson);
         }
 
         public async Task<Gdk.Pixbuf> GetProfilePictureAsync()
         {
             return await HttpUtil.DownloadBitmap(_account.profilePicture);
+        }
+
+        public ConversationUser GetConversationUserByUser(User u)
+        {
+            return _acceptedConversations.SelectMany(x => x.conversationUsers).FirstOrDefault(x => x.user.id == u.id);
         }
     }
 }

@@ -100,7 +100,6 @@ namespace SpeakyClient
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.vbox6 = new global::Gtk.VBox();
 			this.vbox6.Name = "vbox6";
-			this.vbox6.Spacing = 6;
 			// Container child vbox6.Gtk.Box+BoxChild
 			this.hbox4 = new global::Gtk.HBox();
 			this.hbox4.Name = "hbox4";

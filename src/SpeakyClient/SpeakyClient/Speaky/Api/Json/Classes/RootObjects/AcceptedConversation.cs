@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace SpeakyClient.Speaky.Api.Json.Classes.RootObjects
 {
-    public class AcceptedConversations
+    public class AcceptedConversation
     {
 		public List<ConversationUser> conversationUsers { get; set; }
 		public LastMessage lastMessage { get; set; }
