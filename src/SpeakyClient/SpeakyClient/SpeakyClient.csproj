@@ -97,6 +97,8 @@
     <Compile Include="Speaky\Api\Json\Classes\LastMessage.cs" />
     <Compile Include="Speaky\Api\Json\Classes\RootObjects\AcceptedConversation.cs" />
     <Compile Include="Utils\UI\ContactTreeNode.cs" />
+    <Compile Include="UserInfoWindow.cs" />
+    <Compile Include="gtk-gui\SpeakyClient.UserInfoWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Speaky\" />
