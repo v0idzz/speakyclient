@@ -275,8 +275,13 @@
                 <property name="MemberName" />
                 <property name="Spacing">6</property>
                 <child>
-                  <widget class="Gtk.Image" id="chatImg">
+                  <widget class="Gtk.EventBox" id="chatImgEvent">
                     <property name="MemberName" />
+                    <child>
+                      <widget class="Gtk.Image" id="chatImg">
+                        <property name="MemberName" />
+                      </widget>
+                    </child>
                   </widget>
                   <packing>
                     <property name="Position">0</property>
@@ -396,7 +401,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="SpeakyClient.UserInfoWindow" design-size="499 406">
+  <widget class="Gtk.Window" id="SpeakyClient.UserInfoWindow" design-size="481 339">
     <property name="MemberName" />
     <property name="Title" translatable="yes">UserInfoWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -409,7 +414,7 @@
             <property name="MemberName" />
             <property name="Spacing">6</property>
             <child>
-              <widget class="Gtk.Image" id="image1">
+              <widget class="Gtk.Image" id="profilePicImage">
                 <property name="MemberName" />
               </widget>
               <packing>
@@ -582,9 +587,6 @@
             <property name="Expand">False</property>
             <property name="Fill">False</property>
           </packing>
-        </child>
-        <child>
-          <placeholder />
         </child>
       </widget>
     </child>

@@ -7,6 +7,7 @@ namespace SpeakyClient
     public partial class HomeWindow : Gtk.Window
     {
         private Account _account;
+        private Gtk.NodeView chatsView;
 
         public HomeWindow(Account account) :
                 base(Gtk.WindowType.Toplevel)
@@ -22,6 +23,17 @@ namespace SpeakyClient
             nameLbl.Text = _account.Firstname;
 
             BuildTable();
+
+            chatImgEvent.ButtonPressEvent += (s, e) =>
+            {
+                if (e.Event.Button == 1)
+                {
+                    var node = (ContactTreeNode)chatsView.NodeSelection.SelectedNode;
+                    new UserInfoWindow(node.User, _account).Show();
+                }
+            };
+
+
         }
 
         private void BuildTable()
@@ -31,7 +43,7 @@ namespace SpeakyClient
             {
                 store.AddNode(new ContactTreeNode(user));
             }
-            var chatsView = new Gtk.NodeView(store);
+            chatsView = new Gtk.NodeView(store);
 
 			chatsView.AppendColumn("First name", new Gtk.CellRendererText(), "text", 0);
 			chatsView.AppendColumn("Last name", new Gtk.CellRendererText(), "text", 1);
