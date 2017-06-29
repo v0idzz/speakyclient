@@ -9,7 +9,7 @@ namespace SpeakyClient
                 base(Gtk.WindowType.Toplevel)
         {
             this.Build();
-            profilePicImage.Pixbuf = user.GetProfilePicture().Result;
+            profilePicImage.Pixbuf = user.GetProfilePicture().Result.ScaleSimple(300, 300, Gdk.InterpType.Bilinear);
             firstNameLbl.Text = user.firstname;
             lastNameLbl.Text = user.lastname;
             ageLbl.Text = (DateTime.Now.Subtract(DateTime.Parse(user.birthdate)).TotalDays / 365.25).ToString();
